@@ -17,11 +17,11 @@ int main() {
 
   auto model = "/home/henry/.cache/llama.cpp/qwen_qwen3-vl-8b-instruct-gguf_qwen3vl-8b-instruct-q4_k_m.gguf";
   auto instruction = "You are a coding agent that only replies with compilable code. Do not include any markdown, formatting, descriptions or explanatory text.";
-  auto query = "Write me the sieve of eratosthenes in C++.";
+  auto query = "Write me the sieve of eratosthenes in Odin lang.";
 
   CompletionBody cb {
     model,
-    std::format("<|im_start|>system\n{}\n<|im_start|>user\n{}<|im_start|>assistant", instruction, query),
+    std::format("<|im_start|>system\n{}<|im_end|>\n<|im_start|>user\n{}<|im_end|>\n<|im_start|>assistant", instruction, query),
     1024,
     0.1
   };
