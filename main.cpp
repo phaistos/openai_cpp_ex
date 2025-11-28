@@ -15,7 +15,7 @@ struct CompletionBody {
 int main() {
   openai::start("nokey", "", true, "http://localhost:8033/v1/");
 
-  auto model = "/home/henry/.cache/llama.cpp/qwen_qwen3-vl-8b-instruct-gguf_qwen3vl-8b-instruct-q4_k_m.gguf";
+  auto model = "~/.cache/llama.cpp/qwen_qwen3-vl-8b-instruct-gguf_qwen3vl-8b-instruct-q4_k_m.gguf";
   auto instruction = "You are a coding agent that only replies with compilable code. Do not include any markdown, formatting, descriptions or explanatory text.";
   auto query = "Write me the sieve of eratosthenes in Odin lang.";
 
